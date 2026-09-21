@@ -972,14 +972,14 @@
                 <h2 class="text-3xl font-black text-white sm:text-4xl">
                     <span class="lang-fr">Mon CV</span><span class="lang-en hidden">My Resume</span><span class="lang-es hidden">Mi CV</span>
                 </h2>
-                <a id="cv-download-btn" href="cv-fr.pdf" download class="inline-flex items-center gap-2 rounded-xl border border-brand-pin bg-brand-pin/10 px-8 py-4 text-sm font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base shadow-[0_0_20px_rgba(16,185,129,0.2)] mt-4">
+                <a id="cv-download-btn" href="Francais.jpg" download class="inline-flex items-center gap-2 rounded-xl border border-brand-pin bg-brand-pin/10 px-8 py-4 text-sm font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base shadow-[0_0_20px_rgba(16,185,129,0.2)] mt-4">
                     <i class="fa-solid fa-download"></i> 
-                    <span class="lang-fr">Télécharger en PDF</span><span class="lang-en hidden">Download PDF</span><span class="lang-es hidden">Descargar en PDF</span>
+                    <span class="lang-fr">Télécharger en PDF/JPG</span><span class="lang-en hidden">Download</span><span class="lang-es hidden">Descargar</span>
                 </a>
             </div>
 
-            <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-white relative h-[800px]">
-                <iframe id="cv-iframe-display" src="cv-fr.pdf#toolbar=0&view=FitH" class="absolute inset-0 w-full h-full border-none"></iframe>
+            <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-white relative h-auto p-4 md:p-8">
+                <img id="cv-image-display" src="Francais.jpg" alt="CV" class="w-full h-auto object-contain shadow-sm border border-slate-200">
             </div>
         </div>
     </section>
@@ -1120,18 +1120,18 @@
             activeBtn.classList.remove('text-slate-400', 'hover:text-white', 'text-slate-500', 'hover:text-slate-900');
             activeBtn.classList.add('bg-brand-pin', 'text-white');
 
-            const cvIframe = document.getElementById('cv-iframe-display');
+            const cvImg = document.getElementById('cv-image-display');
             const cvBtn = document.getElementById('cv-download-btn');
             
             if(lang === 'fr') {
-                cvIframe.src = 'cv-fr.pdf#toolbar=0&view=FitH';
-                cvBtn.href = 'cv-fr.pdf';
+                cvImg.src = 'Francais.jpg';
+                cvBtn.href = 'Francais.jpg';
             } else if (lang === 'en') {
-                cvIframe.src = 'cv-en.pdf#toolbar=0&view=FitH';
-                cvBtn.href = 'cv-en.pdf';
+                cvImg.src = 'Anglais.jpg';
+                cvBtn.href = 'Anglais.jpg';
             } else if (lang === 'es') {
-                cvIframe.src = 'cv-es.pdf#toolbar=0&view=FitH';
-                cvBtn.href = 'cv-es.pdf';
+                cvImg.src = 'Espagnol.jpg';
+                cvBtn.href = 'Espagnol.jpg';
             }
         }
     </script>
